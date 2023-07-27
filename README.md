@@ -1,4 +1,5 @@
 # J-P-D
+
 Simple remote healthcare App for remote administration of patients.
 
 We have used arbitrary 3 names : found inside the views.py.
