@@ -54,10 +54,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'healthcare_db',
-        'USER': 'root',
-        'PASSWORD': 'replace_with_your_password',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': '',
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
