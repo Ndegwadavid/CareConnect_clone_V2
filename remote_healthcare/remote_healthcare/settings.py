@@ -48,16 +48,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'healthcare_project.wsgi.application'
+#WSGI_APPLICATION = 'healthcare_project.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'healthcare_db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'USER': 'userhere',
+        'PASSWORD': 'passwordhere',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
