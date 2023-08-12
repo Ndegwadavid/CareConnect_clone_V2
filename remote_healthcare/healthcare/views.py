@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Patient, Doctor, Appointment
+from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
@@ -14,6 +15,10 @@ def book_appointment(request):
         'doctors': ['Joy', 'Peter', 'David'],
     }
     return render(request, 'book_appointment.html', context)
+
+def my_view(request):
+    return render(request, 'remote_healthcare/home.html', {'css_file': 'remote_healthcare/css/my_css_file.css'})
+
 
 
 @login_required

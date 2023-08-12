@@ -1,7 +1,187 @@
-<!-- home.html -->
-<a href="{% url 'healthcare:book_appointment' %}" class="btn btn-primary">Book Appointment</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CareConnect</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpg);
+        }
 
-    <h1>Welcome</h1>
-    <!-- Display healthcare news or other relevant information -->
-    <!--to be continued maaan-->
+        header {
+            background-color: #021529;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: auto;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #021529;
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .sub-menu li a {
+            color: rgb(16, 111, 219);
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .nav-links li a:hover {
+            color: rgb(21, 144, 226);
+        }
+
+        .main-content {
+    /*background-image: url('https://unsplash.com/photos/OQYv1-YZkZQ');*/
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+        .info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info p {
+            font-size: 1.2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #021529;
+    color: white;
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-right: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: rgb(21, 144, 226);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                CareConnect
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i> Register
+                        <ul class="sub-menu">
+                            <li><a href="#">Doctor</a></li>
+                            <li><a href="registerpatient.html">Patient</a></li>
+                        </ul>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                        <ul class="sub-menu">
+                            <li><a href="#">Doctor</a></li>
+                            <li><a href="#">Patient</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section class="main-content">
+        <div class="info">
+            <h1>Welcome to <strong>CareConnect</strong></h1>
+            <p><strong>Your trusted platform for accessing remote healthcare services<br> and medical information.</strong></p>
+        </div>
+    </section>
+    
+</body>
+<footer>
+    <ul>
+        <li><a href="#">Read more</a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
+</footer>
+
+</html>
