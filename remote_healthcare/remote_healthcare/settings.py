@@ -54,7 +54,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'healthcare_db',
-        'USER': 'thunder',
+        'USER': 'thunder', # changed due to different user environments.
         'PASSWORD': 'thunder',
         'HOST': '127.0.0.1',
         'PORT': '3306',
