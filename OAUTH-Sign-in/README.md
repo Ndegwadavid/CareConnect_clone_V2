@@ -1,4 +1,6 @@
-Once the application is running,it should run on http://localhost:3000 in theweb browser. 
+# OAUTH-Sign-in
+
+Once the application is running,it should run on <http://localhost:3000> in the web browser.
 
 You should be redirected to the login page, where you can authenticate with the chosen OAuth provider
 
@@ -14,4 +16,4 @@ OAUTH_CLIENT_ID: The client ID of the OAuth application.
 OAUTH_CLIENT_SECRET: The client secret of the OAuth application.
 OAUTH_CALLBACK_URL: The callback URL for the OAuth application.
 
-We shall integrate this after we have managed to make it fully dynamic 
+We shall integrate this after we have managed to make it fully dynamic
