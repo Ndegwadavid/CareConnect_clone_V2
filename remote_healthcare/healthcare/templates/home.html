@@ -1,187 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>CareConnect</title>
-    <style>
-        body, h1, p {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url(bg.jpg);
-        }
+  <title>CareConnect</title>
 
-        header {
-            background-color: #021529;
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Styles */
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin-left: auto;
-        }
+/* General */
 
-        .nav-links li {
-            position: relative;
-        }
-
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: color 0.3s;
-        }
-
-        .nav-links li:hover .sub-menu {
-            display: block;
-        }
-
-        .sub-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #021529;
-            list-style: none;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .sub-menu li a {
-            color: rgb(16, 111, 219);
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-        }
-
-        .nav-links li a:hover {
-            color: rgb(21, 144, 226);
-        }
-
-        .main-content {
-    /*background-image: url('https://unsplash.com/photos/OQYv1-YZkZQ');*/
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 3rem;
-}
-
-.info {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-
-        .info h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .info p {
-            font-size: 1.2rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        footer {
-    position: fixed;
-    bottom: 0;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  
+  header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+  } 
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    background: #007bff;
+    padding: 1rem;
+    display: none;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Slideshow */
+  
+  .slideshow img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .slideshow img {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #021529;
-    color: white;
+    height: 500px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  /* Hero */
+  
+  .hero {
+    position: relative;
+    height: 500px;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    background: #3bd32d;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  /* Services */ 
+  
+  .services {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .service {
     padding: 1rem;
-}
-
-footer ul {
+    width: calc(100% / 3);
+  }
+  
+  .service i {
+    font-size: 2.5rem;
+    color: #0f0f0f;
+  }
+  
+  
+  /* Doctors */
+  
+  .doctors {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .doctor-profile {
+    display: inline-block;
+    text-align: left;
+    margin: 1rem;
+  }
+  
+  .doctor-profile img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  
+  /* Footer */
+  
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .social {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
     padding: 0;
-}
-
-footer li {
-    margin-right: 1rem;
-}
-
-footer a {
-    color: white;
+    margin: 1rem 0;
+  }
+  
+  .social li {
+    margin: 0 1rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links a {
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: rgb(21, 144, 226);
-}
-
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                CareConnect
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="#"><i class="fas fa-home"></i> Home</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user"></i> Register
-                        <ul class="sub-menu">
-                            <li><a href="#">Doctor</a></li>
-                            <li><a href="registerpatient.html">Patient</a></li>
-                        </ul>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="#">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                        <ul class="sub-menu">
-                            <li><a href="#">Doctor</a></li>
-                            <li><a href="#">Patient</a></li>
-                        </ul>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        
-    </header>
-
-    <section class="main-content">
-        <div class="info">
-            <h1>Welcome to <strong>CareConnect</strong></h1>
-            <p><strong>Your trusted platform for accessing remote healthcare services<br> and medical information.</strong></p>
-        </div>
-    </section>
+    margin-right: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
     
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>CareConnect</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Doctors</a>
+          <div class="dropdown-menu">
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Patients</a>
+          <div class="dropdown-menu">
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+          </div>
+        </li>
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div class="slideshow">
+      <img src="img1.jpg">
+      <img src="img2.jpg">
+      <img src="img3.jpg">
+    </div>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Your Trusted Healthcare Platform</h2>
+        <p>Access remote healthcare services and medical information.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+
+    <section class="services">
+
+      <h3>Our Services</h3>
+
+      <div class="service">
+        <i class="fas fa-video"></i>
+        <h4>Telehealth</h4>
+        <p>Connect with doctors through video chat.</p>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-notes-medical"></i>
+        <h4>ePrescriptions</h4>
+        <p>Get medications delivered to your home.</p>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-heart"></i>
+        <h4>Health Tracking</h4>
+        <p>Monitor vitals and symptoms over time.</p>
+      </div>
+
+    </section>
+
+    <section class="doctors">
+
+      <h2>Meet Our Doctors</h2>
+
+      <div class="doctor-profile">
+        <img src="doctor1.jpg" alt="Dr. James">
+        <div class="doctor-info">
+          <h4>Dr. Joy </h4>
+          <p>Pediatrician</p>
+        </div>
+      </div>
+
+      <div class="doctor-profile">
+        <img src="doctor2.jpg" alt="Dr. Joy">
+        <div class="doctor-info">
+          <h4>Dr. James</h4>
+          <p>Cardiologist</p>
+        </div>
+      </div>
+
+      <div class="doctor-profile">
+          <img src="doctor3.jpg" alt="Dr. Peter">
+        <div class="doctor-info">
+            <h4>Dr. Peter</h4>
+            <p>Dermatologist</p>
+        </div>
+      </div>
+      
+      <div class="doctor-profile">
+        <img src="doctor4.jpg" alt="Dr. David ">
+        <div class="doctor-info">
+            <h4>Dr. David</h4>  
+            <p>Surgeon</p>
+        </div>
+    </div>
+    
+</section>
+
+<ul class="social">
+  <li>
+    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+  </li>
+  <li>
+    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+  </li>
+  <li>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+  </li>
+</ul>
+  </main>
+
+  <footer>
+
+      
+      <div class="footer-content">
+          
+          <p>&copy; 2023 CareConnect</p>
+          
+          <div class="footer-links">
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+              <a href="#">Privacy Policy</a>
+            </div>  
+
+      <div class="newsletter">
+        <p>Subscribe to our newsletter:</p>
+        <form>
+          <input type="email" placeholder="Enter email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
-<footer>
-    <ul>
-        <li><a href="#">Read more</a></li>
-        <li><a href="#">Contact us</a></li>
-    </ul>
-</footer>
 
 </html>
