@@ -36,3 +36,5 @@ This project was inspired by the need for a more efficient way to manage patient
 [David Njoroge](https://github.com/Ndegwadavid)
 
 [James njeru](https://github.com/Mu-Gee)
+
+Shall be going private.
