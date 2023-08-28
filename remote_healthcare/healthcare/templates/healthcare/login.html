@@ -1,15 +1,31 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <html lang="en">
-        <head>
-            <title>login</title>
-        </head>
-        <body>
-            <form id="login" method="post">
-                <input type="email" placeholder="email">
-                <input type="password" name="password" placeholder="password">
-                <input type="button" name="login">
-            </form>
-
-        </body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="{% static 'healthcare/styles2.css' %}" rel="stylesheet"><!--notice the naming conventions for css-->
+        <div class="login-page">
+            <div class="form">
+              <form class="register-form acrylic">
+                <span>Sign Up</span>
+                <input type="text" placeholder="Email/ Username"/>
+                <input type="password" placeholder="Password"/>
+              </form>
+              <form class="login-form acrylic">
+                <span>Login to your account</span>
+                <input type="text" placeholder="Email"/>
+                <input type="password" placeholder="Password"/>
+                <button id="SignIn">Login</button>
+                <p>Have an account? no Nice</p>
+                <p class="message"><a href="register.html">Create your CareConnect Account</p>
+                    <script>
+                        $('.message a').click(function(){
+                            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                        });
+                    </script>
+              </form>
+            </div>
     </html>

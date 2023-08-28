@@ -2,15 +2,32 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Patient, Doctor, Appointment
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
 
+
+##added these functions for home and login 
+##addding for register in due time 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "healthcare/home.html")
 
+def login(request):
+    return render(request, "healthcare/login.html")
+
+def register(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        # Create a new user with the submitted username and password respectively
+        user = User.objects.create_user(username=username, password=password)
+        #user logining in
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return redirect('success')
+    
+    return render(request, "healthcare/register.html")
 @login_required
 def book_appointment(request):
-    # Add logic to retrieve available doctors
-    # Example: doctors = Doctor.objects.all()
-    # Pass the doctors to the template context
     context = {
         'doctors': ['Joy', 'Peter', 'David'],
     }
