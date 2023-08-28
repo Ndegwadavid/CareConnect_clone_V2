@@ -4,7 +4,7 @@ This project is designed to simplify healthcare patient administration by provid
 
 ## Getting Started
 
-To use this system, you will need to have access to a web server running PHP and MySQL. You can install these components on your local machine using a tool like XAMPP or WAMP, or you can use a cloud-based hosting service like AWS or DigitalOcean.
+To use this system, you will need to have access to a web server running MySQL. You can install these components on your local machine using a tool like XAMPP or WAMP, or you can use a cloud-based hosting service like AWS or DigitalOcean.
 
 Once you have your web server set up, simply clone this repository to your server's web directory and import the included SQL file to create the necessary database tables.
 
