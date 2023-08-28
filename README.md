@@ -10,7 +10,7 @@ Once you have your web server set up, simply clone this repository to your serve
 
 ## Usage
 
-To use the system, simply navigate to the index.php file in your web browser. From there, you will be prompted to log in with your admin credentials. Once logged in, you will have access to the following features:
+To use the system, simply navigate to the admin panel path in your web browser. From there, you will be prompted to log in with your admin credentials. Once logged in, you will have access to the following features:
 
 - View patient records
 - Add new patients
