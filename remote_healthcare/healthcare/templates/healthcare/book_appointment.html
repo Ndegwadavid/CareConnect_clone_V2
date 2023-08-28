@@ -1,9 +1,29 @@
 <!-- book_appointment.html -->
 
-<a href="{% url 'healthcare:home' %}">Home</a>
+<a href=" {% url 'healthcare:home' %}">Home</a>
+<style>
+    div{
+        background-color: rgb(49, 136, 15);
+        justify-content: baseline;
+        text-align: center;
+        display: block;
+        
+        
+        
+    }
+    
+    .textarea{
+        background-color: transparent;
+        background-image: none;
+        
+    }
+    .textarea::after{
+        background-color: transparent;
+    }
+</style>
 
     <h1>Book an Appointment</h1>
-
+<div>
     <form action="{% url 'healthcare:submit_appointment' %}" method="POST">
 
         <div class="form-group">
@@ -32,3 +52,4 @@
 
         <button type="submit" class="btn btn-primary">Book Appointment</button>
     </form>
+</div>
