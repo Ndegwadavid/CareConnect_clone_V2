@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static '../media/drugs.png' %}" type="image/x-icon"> <!--this doenst load i donno know why though-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="{% static 'healthcare/styles.css' %}" rel="stylesheet">
+        <title>Careconnect</title>
+    </head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{% static '../media/heartbeat.png' %}" alt="Careonnect Logo">
+            <h1><a href="#" class="btn1">Careconnect</a></h1>
+        </div>
+    </header>
+    <!--found out that we were missing to add the static dir folder-->
+    <!--also calling the media and static dir we had to use the ../-->
+    <section class="video-section">
+        <video autoplay loop muted>
+            <source src="{% static '../media/treatment.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="cta-buttons">
+            <a href="/register.html" class="btn">Register</a>
+            <a href="/login.html" class="btn">Login</a>
+            <br>
+            <a href="#more-info" class="btn">Read More</a>
+        </div>
+    </section>
+    
+    <section class="intro-section">
+        <div class="intro-text" id="animatedText"></div>
+        <div class="intro-description">Access remote healthcare services and medical information<br>from comfort of your home</div>
+    </section>
+    
+    <script>
+        const video = document.querySelector('video');
+        window.addEventListener('scroll', () => {
+            video.pause();
+        });
+
+        // Animated text
+        const introText = "Your trusted Healthcare platform";
+        const animatedTextElement = document.getElementById('animatedText');
+        let currentIndex = 0;
+
+        function animateText() {
+            if (currentIndex < introText.length) {
+                animatedTextElement.textContent += introText[currentIndex];
+                currentIndex++;
+                setTimeout(animateText, 100);
+            }
+        }
+
+        animateText();
+    </script>
+</body>
+</html>
