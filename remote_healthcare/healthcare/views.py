@@ -13,6 +13,9 @@ def home(request):
 def login(request):
     return render(request, "healthcare/login.html")
 
+def readmore(request):
+    return render(request,"healthcare/readmore.html")
+
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
