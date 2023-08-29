@@ -14,6 +14,7 @@ urlpatterns = [
     path("submit_appointment", views.submit_appointment, name='submit_appointment'),
     path("login.html", views.login, name="login"), ##added this route to facilitate login in
     path("register.html", views.register, name="register"),##register route
+    path("readmore.html", views.readmore, name="readmore")
     ##adding for register and read more in due time
 ]
 ## these facilitates loading of the media and the static files
