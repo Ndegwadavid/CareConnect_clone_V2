@@ -1,4 +1,7 @@
 # OAUTH-Sign-in
+To be determined with the API provider of choice 
+
+In mean time faclitation of O-AUTH is via Node.js 
 
 Once the application is running,it should run on <http://localhost:3000> in the web browser.
 
