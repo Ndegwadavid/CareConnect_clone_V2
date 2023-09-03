@@ -37,4 +37,3 @@ This project was inspired by the need for a more efficient way to manage patient
 
 [James njeru](https://github.com/Mu-Gee)
 
-Shall be going private.
