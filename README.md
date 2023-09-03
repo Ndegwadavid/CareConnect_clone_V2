@@ -1,28 +1,26 @@
-# Healthcare Patient Administration System
+# CareConnect plus
+ ![CareConnect](/remote_healthcare/healthcare/media/icon.ico)
+ 
+**Careconnect Plus** is a healthcare patient administration providing a centralized system for managing patient information. This system will revolutionalize the healthcare sector with integrated advancement with respect to the new technology innovations.
 
-This project is designed to simplify healthcare patient administration by providing a centralized system for managing patient information. With this system, healthcare providers can easily access and update patient records, view medical histories, and schedule appointments. The system also includes features for tracking medications, managing insurance information, and generating reports. By streamlining these administrative tasks, healthcare providers can focus more on providing quality care to their patients both remotely and on premise.
+**Healthcare practitioners** can administer their patients with ease of access both remotely and on premise.
 
-## Getting Started
-
-To use this system, you will need to have access to a web server running MySQL. You can install these components on your local machine using a tool like XAMPP or WAMP, or you can use a cloud-based hosting service like AWS or DigitalOcean.
-
-Once you have your web server set up, simply clone this repository to your server's web directory and import the included SQL file to create the necessary database tables.
-
+ **Patients** can easily access and update healthcare progress records progressivley within a defined framework, view medical histories, and schedule appointments with the doctors. 
+ 
+ ---
+ 🌼 The system also includes features for tracking medications, managing insurance information, and generating reports. By streamlining these administrative tasks, healthcare providers can focus more on providing quality care to their patients both remotely and on premise.
 ## Usage
 
-To use the system, simply navigate to the admin panel path in your web browser. From there, you will be prompted to log in with your admin credentials. Once logged in, you will have access to the following features:
+**Patients** will have to register via the web application or the android app. Navigate to the dashboard panel and fill in the necessary requiremnts.
 
-- View patient records
-- Add new patients
-- Update patient information
-- Schedule appointments
-- Track medications
-- Manage insurance information
-- Generate reports
+**Independent Healthcare Experts** : independent doctors and healthcare experts will have to register and pass through a robust validation of the documents that will be asked for verifications of the meet the **WHO** standards and the government regulations.
 
+**Healthcare Institutions** Will have to register their services renderers and be given access to the API to operate solely. Robust verification will be implemented in all stages of verification.
+
+Once logged in, users will have access to the feautures.
 ## Contributing
 
-This project is open source and contributions are welcome! If you find a bug or have a feature request, please submit an issue on GitHub. If you would like to contribute code, please fork this repository and submit a pull request with your changes.
+This project is open source and contributions are welcome! If you find a bug or have a feature request, please submit an issue on GitHub. If you would like to contribute code, please fork this repository and submit a pull request with your proposed changes.
 
 ## License
 
@@ -37,3 +35,4 @@ This project was inspired by the need for a more efficient way to manage patient
 
 [James njeru](https://github.com/Mu-Gee)
 
+We are using a **Robust** secure mechanism to protect our users.
