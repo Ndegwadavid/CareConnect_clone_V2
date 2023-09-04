@@ -25,6 +25,8 @@ remote_healthcare:
     -manage.py        
 
 
+## authentication model does not use django's default
+
 
 
 
