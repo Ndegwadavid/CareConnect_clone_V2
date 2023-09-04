@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tap</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="registration-form">
+      <h1>Tap the area below</h1>
+      <div id="tap-area"></div>
+      <p>Tap sequence:</p>
+      <p id="tap-sequence"></p>
+    </div>
+
+    <script>
+      const registrationForm = document.querySelector("#registration-form");
+      const tapArea = document.querySelector("#tap-area");
+      const tapSequence = document.querySelector("#tap-sequence");
+
+      let taps = [];
+      let tapTimeout;
+
+      tapArea.addEventListener("click", function (event) {
+        const tapX = event.offsetX;
+        const tapY = event.offsetY;
+
+        const tappingEffect = document.createElement("div");
+        tappingEffect.classList.add("tapping-effect");
+        tappingEffect.style.left = tapX + "px";
+        tappingEffect.style.top = tapY + "px";
+        tapArea.appendChild(tappingEffect);
+
+        clearTimeout(tapTimeout);
+        taps.push(1);
+        
+        if (taps.length < 5) {
+          tapTimeout = setTimeout(function () {
+            tapSequence.textContent = taps.length;
+            taps = [];
+          }, 2000);
+        } else {
+          tapSequence.textContent = "Secret Tap Keys have been created:\n" + taps.join(",");
+          taps = [];
+          clearTimeout(tapTimeout);
+        }
+      });
+    </script>
+  </body>
+</html>
