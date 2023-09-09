@@ -1,4 +1,4 @@
-# CareConnect plus
+# CareGenius plus
  ![CareConnect](/remote_healthcare/healthcare/media/icon.ico)
  
 **Careconnect Plus** is a healthcare patient administration providing a centralized system for managing patient information. This system will revolutionalize the healthcare sector with integrated advancement with respect to the new technology innovations.
