@@ -2,61 +2,732 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="{% static '../media/drugs.png' %}" type="image/x-icon"> <!--this doenst load i donno know why though-->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-        <link href="{% static 'healthcare/styles.css' %}" rel="stylesheet">
-        <title>Careconnect</title>
-    </head>
-<body>
-    <header class="header">
-        <div class="logo">
-            <img src="{% static '../media/heartbeat.png' %}" alt="Careonnect Logo">
-            <h1><a href="#" class="btn1">Careconnect</a></h1>
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>CareConnect</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+
+Template 2078 Adventure
+
+http://www.tooplate.com/view/2078-adventure
+
+-->
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+
+	<!-- Nivo Lightbox CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+	<!-- Owl Carousel CSS
+   ================================================== -->
+   	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+
+	<!-- BxSlider CSS
+   ================================================== -->
+   	<link rel="stylesheet" href="css/bxslider.css">
+
+   	<!-- Main CSS
+   	================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font
+   ================================================== -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+<!-- Preloader section
+================================================== -->
+<section  class="preloader">
+
+	<div class="sk-rotating-plane"></div>
+
+</section>
+
+
+<!-- Navigation section
+================================================== -->
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#home" class="smoothScroll navbar-brand">CareConnect</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+            
+				<!-- <li><a href="#home" class="smoothScroll">HOME</a></li> -->
+                
+				<li><a href="#work" class="smoothScroll">SERVICES</a></li>
+				<li><a href="#about" class="smoothScroll">ABOUT</a></li>
+				<li><a href="#team" class="smoothScroll">TEAM</a></li>
+				<li><a href="#portfolio" class="smoothScroll">MISSION</a></li>
+				<li><a href="#plan" class="smoothScroll">JOIN</a></li>
+				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+
+
+<!-- Homepage section
+================================================== -->
+<div id="home">
+	<div class="site-slider">
+        <ul class="bxslider">
+			<li>
+                <img src="images/slider/slide1.jpg" alt="slider image 1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Healthcare services</h2>
+                                <p class="color-white">Access first class healthcare services from comfort of your home</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide2.jpg" alt="slider image 2">
+                <div class="container caption-wrapper">
+                    <div class="slider-caption">
+                        <h2>Availability</h2>
+                        <p class="color-white">Get 24/7 healthcare services support from our Doctors.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide3.jpg" alt="slider image 3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Accessibility</h2>
+                                <p class="color-white">Monitor your health progress from anywhere in the parts of the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide4.jpg" alt="slider image 4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Swift Response</h2>
+                                <p class="color-white">Get faster and immediate response to emergencies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/slider/slide5.jpg" alt="slider image 5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slider-caption">
+                                <h2>Download for Free</h2>
+                               <p class="color-white">Get our mobile APK on playstore <a href="https://playstore.google.com">here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul> <!-- /.bxslider -->
+        <div class="bx-thumbnail-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="bx-pager">
+                            <a data-slide-index="0" href=""><img src="images/slider/thumb1.jpg" alt="thumbnail 1" /></a>
+                            <a data-slide-index="1" href=""><img src="images/slider/thumb2.jpg" alt="thumbnail 2" /></a>
+                            <a data-slide-index="2" href=""><img src="images/slider/thumb3.jpg" alt="thumbnail 3" /></a>
+                            <a data-slide-index="3" href=""><img src="images/slider/thumb4.jpg" alt="thumbnail 4" /></a>
+                            <a data-slide-index="4" href=""><img src="images/slider/thumb5.jpg" alt="thumbnail 5" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <!--found out that we were missing to add the static dir folder-->
-    <!--also calling the media and static dir we had to use the ../-->
-    <section class="video-section">
-        <video autoplay loop muted>
-            <source src="{% static '../media/treatment.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="cta-buttons">
-            <a href="/register.html" class="btn">Register</a>
-            <a href="/login.html" class="btn">Login</a>
-            <br>
-            <a href="/readmore.html" class="btn">Read More</a>
-        </div>
-    </section>
-    
-    <section class="intro-section">
-        <div class="intro-text" id="animatedText"></div>
-        <div class="intro-description">Access remote healthcare services and medical information<br>from comfort of your home</div>
-    </section>
-    
-    <script>
-        const video = document.querySelector('video');
-        window.addEventListener('scroll', () => {
-            video.pause();
-        });
+    </div> <!-- /.site-slider -->
+</div>
 
-        // Animated text
-        const introText = "Your trusted Healthcare platform";
-        const animatedTextElement = document.getElementById('animatedText');
-        let currentIndex = 0;
 
-        function animateText() {
-            if (currentIndex < introText.length) {
-                animatedTextElement.textContent += introText[currentIndex];
-                currentIndex++;
-                setTimeout(animateText, 100);
-            }
-        }
+<!-- Work section
+================================================== -->
+<section id="work" class="parallax-section">
+	<div class="container">
+		<div class="row">
 
-        animateText();
-    </script>
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">At CareConnect</h5>
+					<h1 class="heading">WHAT WE DO</h1>
+					<hr>
+					<p>We are dedicated to revolutionizing healthcare administration through our cutting-edge system.<br> Our platform is designed to streamline and enhance the way healthcare professionals manage administrative tasks, ensuring seamless and efficient operations to patients even from a distance.</p>
+				</div>
+			</div>
+
+
+			<!-- Work Owl Carousel section | services section
+			================================================== -->
+			<div id="owl-work" class="owl-carousel">
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+					<i class="icon-tools medium-icon"></i>
+						<h3>SELF ASSESSMENT</h3>
+						<hr>
+						<p>Our clients will have a self-assessment progressive system where they can assess the how well they are doing healthwise.</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+					<i class="icon-tablet medium-icon"></i>
+						<h3>AI-POWERED TRIAGE</h3>
+						<hr>
+						<p>We use machine learning algorithms to perform assessment of a patient's initial state and prioritize their care accordingly</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-bike medium-icon"></i>
+						<h3>TELEMEDICINE SERVICES</h3>
+						<hr>
+						<p>Doctors will be able to provide remote healthcare services to patients though video consulting, therapy sessions and appointments accordingly.</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-flag medium-icon"></i>
+						<h3>PREDICITVE ANALYTICS</h3>
+						<hr>
+						<p>With use of AI, we shall use predictive analytics to identify patients who are at high risk of developing certain health conditions and intervene early</p>
+				</div>
+
+				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<i class="icon-basket medium-icon"></i>
+						<h3>SELF MONITORING</h3>
+						<hr>
+						<p>Patients , Doctors and healthcare institutions will have sole responisbility to monitor themselves based on the purpose.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- About section
+================================================== -->
+<section id="about" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">GET TO KNOW US</h5>
+					<h1 class="heading color-white">WHO ARE WE?</h1>
+					<hr>
+					<p class="color-white">We are a healthcare technology company that specializes in healthcare administration services.<br> Our system allows patients to register and create profiles, and doctors to join the platform and monitor the health of their patients remotely.<br> Our focus is on providing efficient and effective healthcare services that can be accessed from anywhere, at any time. We strive to enhance patient-doctor communication, streamline healthcare administration, and improve overall patient outcomes.<br><strong>Our goal is to leverage technology to make healthcare more accessible, convenient, and personalized for everyone.</strong></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<h3 class="color-white">OUR STORY</h3>
+				<h2>MOTIVATION</h2>
+				<p class="color-white">We are motivated to revolutionalize the healthcare sector. By empowering patients with seamless access to top-notch medical expertise, while providing doctors with advances tools for administration and personalized patients care. This journeys towards a healthier future, where technology and compassion converge to redefine healthcare.</p>
+				<p class="color-white">Experience the future of healthcare with our state-of-the-art platform that combines cutting-edge technology with human touch. </p>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<h2 class="mobile-top">WHY CHOOSE US?</h2>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingOne">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          							Personalized Care
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      						<div class="panel-body">
+        						<p>Our system offers a curated personalised experience all through.We understand that every patient is unique, which is why we provide personalized care that caters to individual needs and preferences.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+    				<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingTwo">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+									Advanced Technology
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      						<div class="panel-body">
+        						<p>With a positive adoption of AI for faster workflows : Our platform leverages the latest technology to provide seamless and efficient healthcare services to patients and doctors.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 					 <div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+									Convinience 
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      						<div class="panel-body">
+        						<p>Our platform provides a secure and convenient environment for all healthcare-related activities, from scheduling appointments to accessing medical records.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+					 
+
+ 				 </div>
+			</div>
+
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="about-fact border-right">
+					<span>24/7 HR</span>
+					<h4>OPERATIONS</h4>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="about-fact border-right">
+					<span>1000 +</span>
+					<h4>USERS</h4>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="about-fact border-right">
+					<span>100%</span>
+					<h4>CONVINIENT</h4>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="about-fact">
+					<span>360*</span>
+					<h4>SECURE</h4>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- team section
+================================================== -->
+<section id="team" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">WE ARE READY</h5>
+					<h1 class="heading">OUR TEAM</h1>
+					<hr>
+					<p>We are proud to have a team of dedicated professionals who are passionate about transforming the healthcare industry. Our team is made up of experienced Healthcare Analysts, Operations Management experts and technology experts who work together to deliver innovative and personalized healthcare services to patients and doctors alike. With a deep understanding of the unique challenges facing the healthcare industry, our team is committed to leveraging technology and human touch to provide a seamless and empowering healthcare experience. Join us on this transformative journey towards a healthier future.</p>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="team-wrapper">
+					<img src="images/team1.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Dennis Mbuvi</h4>
+							<h3>Chief Healthcare Analyst</h3>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.3s">
+				<div class="team-wrapper">
+					<img src="images/team2.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>Joy Mweu</h4>
+							<h3>Chief Operations Manager</h3>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.6s">
+				<div class="team-wrapper">
+					<img src="images/team3.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>David Njoroge</h4>
+							<h3>Lead Software Engineer</h3>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Portfolio section
+================================================== -->
+<section id="portfolio" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">At CareConnect</h5>
+					<h1 class="heading">FEATURES</h1>
+					<hr>
+					<p>Our platform offers a diverse range of cutting-edge features designed to meet the unique needs of our clients. We pride ourselves on delivering high-class services that are tailored to your convenience, making healthcare accessible and hassle-free. Our platform provides a seamless experience, from booking appointments online to secure communication with your healthcare provider. </p>
+				</div>
+			</div>
+
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img1.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>E-PRESCRIPTION</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div>   
+
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img2.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>TELE-MEDICINE</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img3.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>AI-TRIAGE ASSESSMENT</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+          	
+          	<div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img4.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>EMERGENCY RESPONSE</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img5.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>SELF-MONITORING</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
+            <div class="col-md-4 col-sm-6">
+				<div class="grid">
+              		<figure class="effect-zoe">
+						<img src="images/portfolio-img6.jpg" alt="portfolio img"/>
+							<figcaption>
+								<h2>SECURITY</h2>
+								<p class="icon-links">
+									<a href="images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
+								</p>
+							</figcaption>			
+					</figure>
+				</div>
+            </div> 
+
+            <!-- Portfolio bottom section
+			================================================== -->
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+            	<div class="portfolio-bottom">
+            		<h2>INTERESTED?</h2>
+					<p>We bring with us tons of cutting-edge feautures to our users using our system. We are pleased that you have decided to take this step and Join us</p>
+					<a href="#plan" class="smoothScroll btn btn-default">JOIN US</a>
+            	</div>
+            </div>    
+
+		</div>
+	</div>
+</section>		
+
+
+<!-- Plan section
+================================================== -->
+<section id="plan" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 wow fadeInUp">
+				<div class="section-title">
+					<h5 class="wow bounceIn">WE ARE PLEASED TO HAVE YOU ONBOARD</h5>
+					<h1 class="heading color-white">WELCOME</h1>
+					<hr>
+					<p class="color-white">We are glad that you have decided to use CareConnect system to streamline and improve with us the healthcare sector. We cant wait to have you :)</p>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="plan">
+					<h2 class="plan-title">PATIENT?</h2>
+					<div class="plan-price">
+						<h1 class="plan-price-title">feautures <small>:</small></h1>
+					</div>
+					<ul class="plan-list">
+						<li>AI-Triage Assessment</li>
+						<li>Self Monitoring</li>
+						<li>24/7 top-notch expert services</li>
+						<li>Secure</li>
+						<li>E-Prescriptions</li>
+						<li>Appoinmtnets booking</li>
+
+					</ul>
+					<div class="plan-button">
+						<button class="btn btn-default">READMORE</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+				<div class="plan">
+					<h2 class="plan-title">DOCTOR?</h2>
+					<div class="plan-price">
+						<h1 class="plan-price-title">features <small>:</small></h1>
+					</div>
+					<ul class="plan-list">
+						<li>Remote Monitoring</li>
+						<li>Automated Dignosis</li>
+						<li>Predictive Analysis</li>
+						<li>Virtual Assistance</li>
+						<li>Translation processing</li>
+						<li>Payment Processing</li>
+						
+					</ul>
+					<div class="plan-button">
+						<button class="btn btn-default">READMORE</button>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="plan">
+					<h2 class="plan-title">FACILITY?</h2>
+					<div class="plan-price">
+						<h1 class="plan-price-title">feautures <small>:</small></h1>
+					</div>
+					<ul class="plan-list">
+						<li>Patients Monitoring</li>
+						<li>Resource Allocation</li>
+						<li>Automated Patients check in</li>
+						<li>Imaging Analysis</li>
+						<li>Chatbots</li>
+						<li>Inventory Management</li>
+					</ul>
+					<div class="plan-button">
+						<button class="btn btn-default">READMORE</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Contact section
+================================================== -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+				<div class="section-title">
+					<h5 class="wow bounceIn">HAVE ANY QUESTION</h5>
+					<h1 class="heading">CONTACT US</h1>
+					<hr>
+					<p></p>
+				</div>
+			</div>
+
+			<!-- Contact form section
+			================================================== -->
+			<div class="col-md-offset-1 col-md-10 col-sm-12">
+				<form action="#" method="post" class="wow fadeInUp" data-wow-delay="0.6s">
+					<div class="col-md-4 col-sm-6">
+						<input type="text" class="form-control" placeholder="First Name" name="name">
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<input type="text" class="form-control" placeholder="Phone number" name="name">
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<input type="text" class="form-control" placeholder="Position" name="position">
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<input type="text" class="form-control" placeholder="Email" name="name">
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<input type="text" class="form-control" placeholder="Subject" name="subject">
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<textarea class="form-control" placeholder="Message" rows="7" name="message"></textarea>
+					</div>
+					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+						<input type="submit" class="form-control" value="SEND">
+					</div>
+				</form> 
+			</div>
+
+			<!-- Contact detail section
+			================================================== -->
+			<div class="contact-detail col-md-12 col-sm-12">
+				<div class="col-md-6 col-sm-6">
+					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> EMAIL</h3>
+					<p>support@careconnect.org</p>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i> PHONES</h3>
+					<p>+25412345678</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+
+				<h2 class="wow bounceIn">CARECONNECT</h2>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="1s"></a></li>
+					<li><a href="#" class="fa fa-github wow fadeIn" data-wow-delay="1.3s"></a></li>
+					<li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="1.6s"></a></li>
+				</ul>
+				<p>Copyright &copy; 2023 Creconenct 
+                
+                | Engineered by: <a rel="nofollow" href="http://github.com/Ndegwadavid" target="_blank">Njoroge</a></p>
+
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="{% static 'healthcare/js/jquery.js' %}"></script>
+<script src="{% static 'healthcare/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'healthcare/js/smoothscroll.js' %}"></script>
+<script src="{% static 'healthcare/js/nivo-lightbox.min.js' %}"></script>
+<script src="{% static 'healthcare/js/jquery.easing-1.3.js' %}"></script>
+<script src="{% static 'healthcare/js/plugins.js' %}"></script>
+<script src="{% static 'healthcare/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'healthcare/js/jquery.parallax.js' %}"></script>
+<script src="{% static 'healthcare/js/wow.min.js' %}"></script>
+<script src="{% static 'healthcare/js/custom.js' %}"></script>
 </body>
 </html>
