@@ -1,48 +1,50 @@
-from pyexpat.errors import messages
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from .models import Patient, Doctor, Appointment
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponse
-from django.contrib.auth.forms import AuthenticationForm
-
+from django.contrib import messages
+from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView
 
 def home(request):
-    return render(request, "healthcare/home.html")
+    return render(request, 'healthcare/home.html')
 
-def login(request):
+def sign_up(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
+            user = form.save()
+            messages.success(request, 'Account created successfully. You can now log in.')
+            return redirect('sign_in')
+    else:
+        form = UserCreationForm()
+    
+    return render(request, 'healthcare/sign_up.html', {'form': form})
 
-            messages.success(request, 'You have successfully logged in.')
-            return redirect('dashboard') 
+def sign_in(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            login(request, form.get_user())
+            messages.success(request, 'You are now logged in.')
+            return redirect('dashboard')
         else:
-            
             messages.error(request, 'Invalid username or password. Please try again.')
     else:
         form = AuthenticationForm()
-    return render(request, "healthcare/login.html", {"form": form})
+    return render(request, 'healthcare/sign_in.html', {'form': form})
 
+@login_required
 def dashboard(request):
-    return render(request, "healthcare/dashboard.html")
+    return render(request, 'healthcare/dashboard.html', {'user': request.user})
 
-def readmore(request):
-    return render(request,"healthcare/readmore.html")
 
-def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)  # Pass POST data to form to prevent failing csrf
-        if form.is_valid():
-            form.save()
-            return redirect("dashboard.html")
-    else:
-        form = UserCreationForm()
-    return render(request, "healthcare/register.html", {"form": form})
+def log_out(request):
+    logout(request)
+    messages.success(request, 'You have been logged out.')
+    return redirect('sign_in')
 
-def logout(request):
-    messages.sucess(request, "logged out successfully")
+class CustomPasswordResetView(PasswordResetView):
+    template_name = 'healthcare/password_reset.html'
+
+class CustomPasswordResetDoneView(PasswordResetDoneView):
+    template_name = 'healthcare/password_reset_done.html'

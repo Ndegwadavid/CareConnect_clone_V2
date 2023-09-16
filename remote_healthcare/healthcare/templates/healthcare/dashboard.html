@@ -1,9 +1,69 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'healthcare/styles.css' %}">
+    <title>User Dashboard</title>
 </head>
 <body>
-    <h1>Welcome User</h1>
+    <header>
+        <h1>Welcome {{ user.username }} to Your Dashboard</h1>
+        <p>Hello, {{ user.username }}!</p> 
+    </header>
+    <main>
+        <section class="dashboard-section">
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Your Remote Healthcare Dashboard</p>
+            <p>Your last check-up: Normal</p>
+        </section>
+    
+        <section class="appointment-section">
+            <h3>Upcoming Appointments</h3>
+            <ul>
+                <li>
+                    <strong>Appointment with Dr. Smith</strong>
+                    <p>Date: October 15, 2023</p>
+                    <p>Time: 10:30 AM</p>
+                    <p>Location: Virtual</p>
+                </li>
+                <li>
+                    <strong>Appointment with Dr. Johnson</strong>
+                    <p>Date: October 22, 2023</p>
+                    <p>Time: 3:00 PM</p>
+                    <p>Location: Clinic B</p>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="health-records-section">
+            <h3>Health Records</h3>
+            <p>Recent Test Results:</p>
+            <ul>
+                <li>Blood Pressure: Normal</li>
+                <li>Cholesterol Level: Slightly Elevated</li>
+                <li>Blood Sugar Level: Normal</li>
+            </ul>
+        </section>
+    
+        <section class="messages-section">
+            <h3>Messages</h3>
+            <div class="message">
+                <p><strong>Appointment Reminder:</strong> Your appointment with Dr. Smith is scheduled for October 15, 2023.</p>
+                <p class="message-time">Sent on October 10, 2023, 3:15 PM</p>
+            </div>
+            <div class="message">
+                <p><strong>Prescription Refill:</strong> Your prescription for medication XYZ is ready for refill.</p>
+                <p class="message-time">Sent on October 8, 2023, 9:30 AM</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="{% url 'log_out' %}">Log Out</a>
+        <a href="{% url 'password_reset' %}">Reset Password</a>
+    </footer>
 </body>
 </html>

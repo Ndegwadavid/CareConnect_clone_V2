@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'healthcare/styles.css' %}">
+
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Remote Healthcare</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Sign Up</h2>
+            <p>Create an account to access our services.</p>
+            <a href="{% url 'sign_up' %}">Sign Up</a>
+        </section>
+        <section>
+            <h2>Sign In</h2>
+            <p>Already have an account? Log in here.</p>
+            <a href="{% url 'sign_in' %}">Sign In</a>
+        </section>
+    </main>
+</body>
+</html>
