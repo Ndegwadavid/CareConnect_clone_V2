@@ -1,4 +1,12 @@
-# settings.py
+# Import environment variables using python-decouple 
+from decouple import config
+
+# Load environment variables from .env file
+GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = config('GOOGLE_CLIENT_SECRET')
+GITHUB_CLIENT_ID = config('GITHUB_CLIENT_ID')
+GITHUB_CLIENT_SECRET = config('GITHUB_CLIENT_SECRET')
+
 
 import os
 
@@ -18,10 +26,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'healthcare',
-    'allauth'
-    'allauth.account'
-    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount.providers.oauth2',
+    'allauth.socialaccount.providers.google', 
+    'allauth.socialaccount.providers.github', 
+    'allauth.socialaccount', 
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -29,6 +41,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -39,8 +52,9 @@ ROOT_URLCONF = 'remote_healthcare.urls'
 
 TEMPLATES = [
     {
+
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -50,10 +64,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    },
+    }
 ]
 
-#WSGI_APPLICATION = 'healthcare_project.wsgi.application'
+# WSGI_APPLICATION = 'healthcare_project.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -83,10 +97,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.socialaccount.auth_backends.AuthenticationBackend',
-    # Other authentication backends if needed
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
 
 LANGUAGE_CODE = 'en-us'
 
@@ -105,5 +117,29 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'healthcare', 'media')
 
 LOGIN_URL = 'sign_in'  
-LOGOUT_URL = 'log_out'  
+LOGOUT_URL = 'log_out'
 
+# social accounts for sign in google for clients github for developers
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'APP': {
+            'client_id': GOOGLE_CLIENT_ID, 
+            'secret': GOOGLE_CLIENT_SECRET, 
+        },
+    },
+
+    'github': {
+        'SCOPE': ['user', 'repo'],
+        'APP': {
+            'client_id': GITHUB_CLIENT_ID,
+            'secret': GITHUB_CLIENT_SECRET,
+        },
+    },
+}
