@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'healthcare',
+    'allauth'
+    'allauth.account'
     
 ]
 
@@ -81,6 +83,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.socialaccount.auth_backends.AuthenticationBackend',
     # Other authentication backends if needed
 ]
 
