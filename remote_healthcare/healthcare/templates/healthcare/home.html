@@ -4,25 +4,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'healthcare/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="{% static 'healthcare/js/loader.js' %}"></script>
 
+    <link rel="stylesheet" href="{% static 'healthcare/css/styles.css' %}">
     <title>Home Page</title>
 </head>
-<body>
+<body>  
     <header>
-        <h1>Welcome to Remote Healthcare</h1>
+        <div class="navbar">
+            <img src="{% static 'media/icon.ico' %}" class="logo" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'sign_up' %}" id="signup-link">Sign up</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'sign_in' %}" id="signin-link">Sign in</a></li>
+                </ul>
+                
+            </nav>
+            <img src="{% static 'media/menu.png' %}" class="menu-icon" alt="Menu Icon">
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Sign Up</h2>
-            <p>Create an account to access our services.</p>
-            <a href="{% url 'sign_up' %}">Sign Up</a>
-        </section>
-        <section>
-            <h2>Sign In</h2>
-            <p>Already have an account? Log in here.</p>
-            <a href="{% url 'sign_in' %}">Sign In</a>
-        </section>
-    </main>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Who are we</h1>
+                    <p>We are a revolutionary team dedicated to improving healthcare services.</p>
+                    <button type="button">Read more</button>
+                </div>
+                <div class="col">
+                    <div class="card card1">
+                        <h5>Administration</h5>
+                        <p>Remote administration services</p>
+                    </div>
+                    <div class="card card2">
+                        <h5>Administration</h5>
+                        <p>Remote administration services</p>
+                    </div>
+                    <div class="card card3">
+                        <h5>Administration</h5>
+                        <p>Remote administration services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <div class="team-description">
+                <h2>Meet Our Team</h2>
+                <p>We are proud to have a team of dedicated professionals <br>who are passionate about transforming the healthcare industry. <br>Our team is made up of experienced Healthcare Analysts, Operations Management experts, and technology experts who work together to deliver innovative and personalized healthcare services to patients and doctors alike.<br> With a deep understanding of the unique challenges facing the healthcare industry, <br>our team is committed to leveraging technology and human touch to provide a seamless and empowering healthcare experience. Join us on this transformative journey towards a healthier future.</p>
+            </div>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-box">
+                        <div class="member-photo">
+                            <img src="{% static 'media/team_member1.jpg' %}" alt="David Njoroge">
+                        </div>
+                        <div class="member-details">
+                            <h3>David Njoroge</h3>
+                            <p class="description">Lead Engineer</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="team-member">
+                    <div class="member-box">
+                        <div class="member-photo">
+                            <img src="{% static 'media/team_member1.jpg' %}" alt="Jane Smith">
+                        </div>
+                        <div class="member-details">
+                            <h3>James NJeru</h3>
+                            <p class="description">DevOps Lead</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-box">
+                        <div class="member-photo">
+                            <img src="{% static 'media/team_member1.jpg' %}" alt="John Doe">
+                        </div>
+                        <div class="member-details">
+                            <h3>ALice Ngugi</h3>
+                            <p class="description">Technical Engineer</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="plans" class="parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 wow fadeInUp">
+                    <div class="section-title">
+                        <h5 class="wow bounceIn">DISCOVER OUR PLANS</h5>
+                        <h1 class="heading color-white">Choose the Right Plan for You</h1>
+                        <hr>
+                        <p class="color-white">Explore our tailored plans to meet your specific needs. Whether you are a patient seeking top-notch healthcare, a healthcare facility in need of advanced tools, or an independent doctor looking to enhance your practice, we have a plan for you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="plan">
+                        <h2 class="plan-title">PATIENTS</h2>
+                        <div class="plan-price">
+                            <h1 class="plan-price-title">Features <small>:</small></h1>
+                        </div>
+                        <ul class="plan-list">
+                            <li>AI-Triage Assessment</li>
+                            <li>Self Monitoring</li>
+                            <li>24/7 Expert Services</li>
+                            <li>Secure Communication</li>
+                            <li>E-Prescriptions</li>
+                            <li>Appointment Booking</li>
+                        </ul>
+                        <div class="plan-button">
+                            <button class="btn btn-default">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="plan">
+                        <h2 class="plan-title">HEALTHCARE HOSPITALS</h2>
+                        <div class="plan-price">
+                            <h1 class="plan-price-title">Features <small>:</small></h1>
+                        </div>
+                        <ul class="plan-list">
+                            <li>Patients Monitoring</li>
+                            <li>Resource Allocation</li>
+                            <li>Automated Check-In</li>
+                            <li>Imaging Analysis</li>
+                            <li>Chatbots for Support</li>
+                            <li>Inventory Management</li>
+                        </ul>
+                        <div class="plan-button">
+                            <button class="btn btn-default">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="plan">
+                        <h2 class="plan-title">INDEPENDENT DOCTORS</h2>
+                        <div class="plan-price">
+                            <h1 class="plan-price-title">Features <small>:</small></h1>
+                        </div>
+                        <ul class="plan-list">
+                            <li>Remote Monitoring</li>
+                            <li>Automated Diagnosis</li>
+                            <li>Predictive Analysis</li>
+                            <li>Virtual Assistance</li>
+                            <li>Translation Services</li>
+                            <li>Payment Processing</li>
+                        </ul>
+                        <div class="plan-button">
+                            <button class="btn btn-default">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
 </body>
 </html>
