@@ -33,6 +33,12 @@ def sign_in(request):
         form = AuthenticationForm()
     return render(request, 'healthcare/sign_in.html', {'form': form})
 
+def profile_view(request): ## supports the fallback after sso
+    return render(request, 'healthcare/dashboard.html')
+
+
+
+
 @login_required
 def dashboard(request):
     return render(request, 'healthcare/dashboard.html', {'user': request.user})
