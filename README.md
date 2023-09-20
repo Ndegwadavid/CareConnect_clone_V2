@@ -1,5 +1,6 @@
 ***in progress...***
 
 support the developer?
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-yellow.svg)](https://www.buymeacoffee.com/Ndegwadavid)
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-orange?style=flat-square&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/Ndegwadavid)
 
