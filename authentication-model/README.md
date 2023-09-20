@@ -1,1 +1,0 @@
-Authentication Model using Zero tap sequence

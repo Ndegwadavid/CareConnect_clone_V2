@@ -4,20 +4,20 @@ remote_healthcare:
                -migrations
                - static
                       -healthcare
-                             -styles.css
+                              -css
+                                  -styles.css
                 - templates
                       -healthcare
+                            dashboard.html
                             home.html
-                            base.html
-                            init.py
-                            admin.py
-                            apps.py
-                            models.py
-                            tests.py
-                            urls.py
-                            views.py
+                            password_reset.html
+                            password_reset_done.html
+                            readmore.html
+                            sign_in.html
+                            sign_out.html
+
      -remote_healthcare
-               - init.py
+               init.py
                asgi.py
                settigns.py
                urls.py

@@ -1,23 +1,20 @@
-# urls.py
-from django.urls import path
-from healthcare import views
+import statistics
 from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import include, path
+from . import views
+from django.contrib.auth import views as auth_views
 
-app_name = 'healthcare'
-
+## migth overwrite the singles without the accounts
 urlpatterns = [
+
     path('', views.home, name='home'),
-    #path('patient_profile/<str:patient_name>/', views.patient_profile, name='patient_profile'),
-    #path('doctor_profile/<str:doctor_name>/', views.doctor_profile, name='doctor_profile'),
-   # path("book_appointment", views.book_appointment, name='book_appointment'),
-    #path("submit_appointment", views.submit_appointment, name='submit_appointment'),
-    path("login.html", views.login, name="login"), ##added this route to facilitate login in
-    path("register.html", views.register, name="register"),##register route
-    path("readmore.html", views.readmore, name="readmore"),
-    path("dashboard.html", views.dashboard, name="dashboard"),
+    path('sign_up/', views.sign_up, name='sign_up'),
+    path('sign_in/', views.sign_in, name='sign_in'),
+    path('log-out/', views.log_out, name='log_out'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('password-reset/', views.CustomPasswordResetView.as_view(), name='password_reset'),
+    path('password-reset/done/', views.CustomPasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='healthcare/sign_in.html'), name='custom_login'), ## what happens after click sign in
+    path('accounts/profile/', views.profile_view, name='profile'), ## where to fall after sso sign in
+    path('accounts/', include('allauth.urls')),
 ]
-## these facilitates loading of the media and the static files
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
