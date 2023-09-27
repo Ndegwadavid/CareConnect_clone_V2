@@ -1,0 +1,126 @@
+/* Footer Styles */
+.footer {
+    background-color: #121518;
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-logo h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #5c96cc;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+  }
+  
+  .footer-menu,
+  .footer-contact,
+  .footer-social {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-menu h2,
+  .footer-contact h2,
+  .footer-social h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0085ff; 
+  }
+  
+  .footer-menu ul,
+  .footer-contact ul,
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-menu li,
+  .footer-contact li,
+  .footer-social li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-menu a,
+  .footer-contact ul li,
+  .footer-social ul li {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .footer-contact i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #0085ff; 
+  }
+  
+  .footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s; 
+  }
+  
+  .footer-social a:hover {
+    color: #0085ff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; 
+  }
+  
+  .footer-bottom a:hover {
+    color: #0085ff; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo,
+    .footer-menu,
+    .footer-contact,
+    .footer-social {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .footer-logo h1 {
+      margin-bottom: 20px;
+    }
+  }
+  

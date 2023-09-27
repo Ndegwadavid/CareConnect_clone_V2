@@ -38,7 +38,6 @@ def profile_view(request): ## supports the fallback after sso
 
 
 
-
 @login_required
 def dashboard(request):
     return render(request, 'healthcare/dashboard.html', {'user': request.user})

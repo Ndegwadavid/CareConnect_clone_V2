@@ -1,0 +1,27 @@
+
+body{
+    align-items: center;
+}
+h2{
+    font-size: large;
+}
+.signup{
+    align-items: center;
+    background-color: beige;
+    padding: 30%;
+    margin-top: -40px;
+    justify-content: center;
+}
+.signup a{
+    text-decoration: none;
+    font-weight: bold;
+}
+button{
+    color: rgb(66, 86, 87);
+    size: 50px;
+    
+}
+button:hover{
+    background-color: rgb(89, 124, 89);
+    
+}
