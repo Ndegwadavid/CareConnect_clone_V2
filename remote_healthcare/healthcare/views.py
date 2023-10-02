@@ -45,6 +45,16 @@ def messages_view(request):
     return render(request, 'messages.html', context={'messages': messages_data})
 
 
+def update_profile(request):
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=request.user.userprofile)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+    else:
+        form = UserProfileForm(instance=request.user.userprofile)
+    return render(request, 'dashboard.html', {'form': form})
+
 @login_required
 def dashboard(request):
     return render(request, 'healthcare/dashboard.html', {'user': request.user})

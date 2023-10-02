@@ -30,6 +30,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{% url 'messages' %}">Messages</a>
     </li>
+  
   </ul>
 
   <!-- Right Aligned Links -->
@@ -38,6 +39,10 @@
       <a class="nav-link" href="{% url 'logout' %}">Logout</a>
       
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'update_profile' %}">Update Profile</a>
+  </li>
+  
     <li class="nav-item">
         <a class="nav-link" href="{% url 'logout' %}">Settings</a>
         
@@ -52,29 +57,32 @@
     <!-- Left Sidebar -->
     <div class="col-md-4">
         <!-- Profile Card -->
-        <div class="card mb-3">
-            <div class="card-body text-center">
-                <img src="{% static 'media/default-profile.png' %}" alt="Profile"
-                     class="img-fluid rounded-circle mb-2" id="profile-picture">
-                <h3>{{ user.username }}</h3>
-                <p class="text-muted">Some details about user</p>
-            </div>
-        </div>
-    
+       <!-- Profile Card -->
+<div class="card mb-3">
+  <div class="card-body text-center">
+    <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture">
+      <h3>{{ user.username }}</h3>
+      <p class="text-muted">Some details about user</p>
+  </div>
+</div>
+
         <!-- User Information Form -->
         <div class="card">
             <div class="card-header">
                 Update Information
             </div>
             <div class="card-body">
-                <form method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <!-- Profile Picture Upload -->
-                    <div class="form-group">
-                        <label for="profile-picture-input">Profile Picture</label>
-                        <input type="file" accept="image/*" id="profile-picture-input" name="profile_picture">
-                    </div>
-    
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- Profile Picture Upload -->
+                <div class="form-group">
+                    <label for="profile-picture-input">Profile Picture</label>
+                    <input type="file" accept="image/*" id="profile-picture-input" name="profile_picture">
+                </div>
+                <!-- ... (other fields) ... -->
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+            
                     <!-- Email Address -->
                     <div class="form-group">
                         <label for="email">Email Address</label>

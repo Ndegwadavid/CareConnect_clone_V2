@@ -18,4 +18,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('appointments/', views.appointments_view, name='appointments'),
     path('messages/', views.messages_view, name='messages'),
+    path('update_profile/', views.update_profile, name='update_profile'),
 ]
+
