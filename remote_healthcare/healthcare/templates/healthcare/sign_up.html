@@ -1,19 +1,25 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="{% static 'healthcare/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'healthcare/css/styles1.css' %}">
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="{% url 'sign_in' %}">Sign In</a></p>
+    <div id="signup" class="signup">
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <p>As a patient</p>
+            <form method="post" class="signup-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Register</button>
+            </form>
+            <p class="signin-link">Already have an account? <a href="{% url 'sign_in' %}">Sign In</a></p>
+        </div>
+    </div>
 </body>
 </html>
