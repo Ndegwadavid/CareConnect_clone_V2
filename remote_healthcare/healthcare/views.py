@@ -36,6 +36,13 @@ def sign_in(request):
 def profile_view(request): ## supports the fallback after sso
     return render(request, 'healthcare/dashboard.html')
 
+def appointments_view(request):
+    # ensure later i add a logic for appointments
+    return render(request, 'appointments.html', context={'appointments': appointments_data})
+
+def messages_view(request):
+    # messages logic as well 
+    return render(request, 'messages.html', context={'messages': messages_data})
 
 
 @login_required
@@ -53,3 +60,5 @@ class CustomPasswordResetView(PasswordResetView):
 
 class CustomPasswordResetDoneView(PasswordResetDoneView):
     template_name = 'healthcare/password_reset_done.html'
+
+
